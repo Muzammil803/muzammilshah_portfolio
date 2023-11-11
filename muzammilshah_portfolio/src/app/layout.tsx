@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Header from './Header'
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { theme } from "./theme"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +20,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <div className='lg:w-11/12 md:w-full mx-auto' >
+            <Header />
+            {children}
+          </div>
+        </ThemeProvider>
+
+      </body>
     </html>
   )
 }
