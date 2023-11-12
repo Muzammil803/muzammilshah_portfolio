@@ -8,14 +8,14 @@ export const theme = createTheme({
         type: 'dark',
         primary: {
           main: '#121212',
-          light: '#121212',
+          light: '#ffffff',
         },
         secondary: {
           main: '#121212',
         },
         text: {
           secondary: '#ffffff',
-          primary: '#121212',
+          primary: '#ffffff',
           disabled: 'rgba(51,51,51,0.5)',
         },
       },

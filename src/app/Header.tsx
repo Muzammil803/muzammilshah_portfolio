@@ -73,7 +73,7 @@ function Header() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color='inherit'
             >
               <MenuIcon />
             </IconButton>
@@ -119,6 +119,8 @@ function Header() {
                 background: "linear-gradient(90deg, rgba(19,176,245,1) 0%, rgba(231,15,170,1) 100%)",
                 backgroundClip: "text",
                 color: "transparent",
+                fontSize:{xs:"1rem",sm:"1.2rem"}
+                
               }}
             >
               {"{MUZAMMIL SHAH}"}
@@ -128,21 +130,24 @@ function Header() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, display: 'block',fontSize:"0.7rem", color:"#A7A7A7"}}
+                sx={{ my: 2, display: 'block',fontSize:"0.8rem", color:"#A7A7A7"}}
               >
                 {page}
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0,display:{sm:"hide",md:"flex"} }} className="flex space-x-2 ">
-            <Typography className=''>
+          <Box sx={{ flexGrow: 0, display: { xs: 'none', sm: 'flex' } }} className= 'space-x-2'>
+            <Typography  component="a"
+            href="https://github.com/muzammil803" target="_blank"  className=''>
             <FaGithub className="text-white text-xl" />
             </Typography>
-            <Typography className=''>
+            <Typography  component="a"
+            href="https://www.linkedin.com/in/muhammad-muzammil-7a280222a/" target="_blank" className=''>
             <FaLinkedin className="text-white text-xl" />
             </Typography>
-            <Typography className=''>
+            <Typography  component="a"
+            href="https://twitter.com/syedmuzammil803" target="_blank"  className=''>
             <AiFillTwitterCircle className="text-white text-xl" />
             </Typography>
           </Box>
